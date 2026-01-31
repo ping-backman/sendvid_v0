@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Video Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Video Gallery</h1>
+
+  <!-- Controls -->
+  <div class="controls">
+    <label for="sort">Sort by:</label>
+    <select id="sort">
+      <option value="relevance">Most Relevant</option>
+      <option value="popular">Most Popular</option>
+      <option value="newest">Newest</option> 
+      <option value="discover">Discover More</option>
+      <option value="short">Short (&lt; 10m)</option>
+      <option value="long">Long (10–40m)</option>
+      <option value="longest">Longest (40m+)</option>       
+    </select>
+    <div id="small-loading" class="small-spinner"></div>
+    <input type="text" id="tag" placeholder="Search by tag or keyword">
+    <button id="apply-filters">Apply</button>
+  </div>
+
+  <!-- Gallery -->
+  <div id="gallery" class="grid"></div>
+
+  <!-- Loading Spinner -->
+  <div id="loading">
+    <div class="spinner"></div>
+    <div>Please wait…</div>
+  </div>
+
+  <!-- Load More -->
+  <button id="loadmore" class="loadmore">Load More Videos</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
